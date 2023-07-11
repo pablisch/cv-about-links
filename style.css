@@ -17,6 +17,21 @@ Responsive Image gallery Style rules
   --labelLightText: rgb(255, 255, 255);
   --labelDark: rgba(43, 43, 44, 0.75);
   --hamburgerMenu: rgba(230, 230, 230, 0.9);
+
+  /* colour palette from https://coolors.co/palette/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472 */
+  --pink: #ffa69e;
+  --cream: #faf3dd;
+  --light-blue: #b8f2e6;
+  --mid-blue: #aed9e0;
+  --grey: #5e6472;
+
+  /* colour palette from https://coolors.co/palette/faf3dd-c8d5b9-8fc0a9-68b0ab-696d7d */
+  --green1: #faf3dd;
+  --green2: #c8d5b9;
+  --green3: #8fc0a9;
+  --green3b: #aecebf;
+  --green4: #68B0AB;
+  --green5: #696d7d;
 }
 
 html {
@@ -38,8 +53,8 @@ body {
 }
 
 nav {
-  background-color: var(--navbar);
-  background-image: url('images/ropeBackground3.jpeg');
+  background-color: var(--green2);
+  /* background-image: url('images/ropeBackground3.jpeg'); */
   background-size: cover;
   padding: 7px 0;
   z-index: 0;
@@ -81,10 +96,18 @@ nav {
   margin: 0 8px;
 }
 
-.longlink1 {flex-basis: 80px;}
-.longlink2 {flex-basis: 145px;}
-.shortlink1 {flex-basis: 50px;}
-.shortlink2 {flex-basis: 40px;}
+.longlink1 {
+  flex-basis: 80px;
+}
+.longlink2 {
+  flex-basis: 145px;
+}
+.shortlink1 {
+  flex-basis: 50px;
+}
+.shortlink2 {
+  flex-basis: 40px;
+}
 
 .hamburger {
   display: none;
@@ -146,7 +169,8 @@ ul {
 /* Responsive image gallery rules begin*/
 
 section {
-  background-color: rgba(230, 230, 230, 0.8);
+  /* background-color: rgba(230, 230, 230, 0.8); */
+  background-color: var(--green1);
   transition: background-color 3s ease;
 }
 
@@ -173,7 +197,7 @@ section {
   border-radius: 25px;
 }
 
-.knotlabel {
+.panel-label {
   position: absolute;
   width: 100%;
   height: 20%;
@@ -191,11 +215,11 @@ section {
   text-align: center;
 }
 
-.longTitle1 {
+.long-title-1 {
   font-size: 1.5rem;
 }
 
-.longTitle2 {
+.long-title-2 {
   font-size: 1.35rem;
 }
 
@@ -214,8 +238,16 @@ section {
   align-items: center;
   justify-content: center;
   padding: 40px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
+}
+
+.short-text1 {
+  font-size: 1.3rem;
+}
+
+.short-text2 {
+  font-size: 1.5rem;
 }
 
 /* hover */
@@ -225,7 +257,7 @@ section {
   border: 1px var(--labelDark) solid;
 }
 
-.image-gallery li:hover .knotlabel {
+.image-gallery li:hover .panel-label {
   background-color: var(--preOverlayLight);
   color: var(--preOverlayDarkText); 
 } */
@@ -237,15 +269,15 @@ section {
   border: 1px var(--labelDark) solid;
 }
 
-.infoActiveKnotlabel {
+.infoActivepanel-label {
   /* transform: scale(0); */
   background-color: var(--preOverlayLight);
-  color: var(--preOverlayDarkText); 
+  color: var(--preOverlayDarkText);
 }
 
 #videoSection {
-  background-color: var(--navbar);
-  background-image: url('images/ropeBackground3.jpeg');
+  background-color: var(--green3b);
+  /* background-image: url('images/ropeBackground3.jpeg'); */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -270,21 +302,22 @@ section {
   padding: 0 0 20px;
 }
 
-.iframe-container{
+.iframe-container {
   position: relative;
   max-width: 840px;
   max-height: 473px;
   width: 80vw;
   margin: 0 auto 0;
-  padding-bottom: 33%; 
+  padding-bottom: 33%;
   height: 0;
   border: 1px var(--labelDark) solid;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
   transition: padding-bottom 1s ease;
 }
-.iframe-container iframe{
+.iframe-container iframe {
+  background-color: var(--cream);
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;

@@ -192,7 +192,7 @@ function clearActive() {
 // APPLY infoActive to ALL panels + apply long transitions
 function allActive() {
   knots.forEach(knot => {
-    knot.style.transition = 'all 4s ease-in-out';
+    knot.style.transition = 'all 1s ease-in-out';
     knot.classList.add('infoActiveOverlay');
   })
   knotLabels.forEach(label => {
