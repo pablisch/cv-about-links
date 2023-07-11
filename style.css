@@ -191,7 +191,11 @@ section {
   text-align: center;
 }
 
-.long {
+.longTitle1 {
+  font-size: 1.5rem;
+}
+
+.longTitle2 {
   font-size: 1.35rem;
 }
 

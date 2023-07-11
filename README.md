@@ -1,4 +1,4 @@
-# Knot Very Useful
+# CV About Links - More About Me
 
 ## Getting Started
 
@@ -8,11 +8,8 @@
 
 ## Description
 
-This is a simple knot making instruction app that was made for four main reasons:
-* As someone in the early stages of learning software development, it was a purposeful and practical way to practice my skills.
-* As someone in the early stages of learning software development, this was a playful exploration of the possibilities of DOM manipulation and CSS.
-* As a Forest School Leader, it was very helpful to have a quick reference for knots that I could use to teach the children and that they could use independently.
-* As a Forest School Leader this app became a part of my own Forest School portfolio, above and beyond the requirements of the Forest School Leader level 3 qualification.
+This is a quick webpage made as an addition to my CV to give some context to comments about myself for anyone that wishes to know a little more.
+It was based upon an earlier project of mine, [Knot Very Useful](https://github.com/pablisch/knot-very-useful), which was a simple app to display a range of knots and their descriptions.
 
 Screenshot of the navbar, app knot selection and descriptions:
 ![navbar, app knot selection and descriptions](/images/readmeImages/knot-descriptions.png)
