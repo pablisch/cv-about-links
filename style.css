@@ -30,7 +30,7 @@ Responsive Image gallery Style rules
   --green2: #c8d5b9;
   --green3: #8fc0a9;
   --green3b: #aecebf;
-  --green4: #68B0AB;
+  --green4: #68b0ab;
   --green5: #696d7d;
 }
 
@@ -275,7 +275,7 @@ section {
   color: var(--preOverlayDarkText);
 }
 
-#videoSection {
+#focus-section {
   background-color: var(--green3b);
   /* background-image: url('images/ropeBackground3.jpeg'); */
   background-size: cover;
@@ -283,6 +283,22 @@ section {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.focus-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 90vw;
+}
+
+.focus-text {
+  flex: 1 1 150px;
+  margin-right: 30px;
+}
+
+.focus-frame {
+  flex: 2 1 150px;
 }
 
 #btn {
@@ -296,19 +312,19 @@ section {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
 
-.videoContainer {
-  width: 100vw;
-  margin: 0 auto;
+.focus-frame {
+  /* width: 100vw; */
+  /* margin: 0 auto; */
   padding: 0 0 20px;
 }
 
 .iframe-container {
   position: relative;
-  max-width: 840px;
-  max-height: 473px;
-  width: 80vw;
-  margin: 0 auto 0;
-  padding-bottom: 33%;
+  /* max-width: 840px;
+  max-height: 473px; */
+  /* width: 80vw; */
+  /* margin: 0 auto 0; */
+  /* padding-bottom: 33%; */
   height: 0;
   border: 1px var(--labelDark) solid;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);

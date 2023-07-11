@@ -14,6 +14,18 @@ const round = 'ZhTOt1GcFGI';
 const sheet = 'o9Kgs4PdPiw';
 const square = 'z-lydqHKVdw';
 
+const spaceTitle = "Edge of Space Explorer"
+const spaceText1 = "I was privileged to get the amazing oportunity of sending a Raspberry Pi computer to the edge of space using a high-altitude balloon as primary school anniversary celebration project. The payload included a range of cameras programmed in python to record a mix of video and images and send live images back to Earth, a GPS unit to track the journey and transmitter to send back live telemetry of the flight."
+const spaceText2 = "On the ground, we followed th progress in a minibus, making live predictions about the landing site and quickly retrieved the payload that came hurtling back to Earth to land safely in a wheat field."
+const marchWoodTitle = "Forest Creator"
+const marchWood1 = "The largest barrier to setting up Forest School at my primary school was the profound lack of trees so I planted a brand new baby woodland that become known as March Wood. There were no end of challenges including funds and resources, unmoveable deadlines, the reality of how long natures take to grow what you want as well as how quickly it grows what you definitely do not want, and helping saplings survive the long, hot summer holidays when the school is closed."
+const marchWood2 = "It took passion, dedication and resilience, espically in the midst of the pandemic lockdowns, but March Wood has thrived, tiny saplings now tower over me and we have an amazing outdoor classroom for all the school to enjoy."
+const forestSchoolTitle = "Forest School leader"
+const forestSchoolText1 = "It was a joy to train and work as a Forest School Leader at a school in Tottenham, working with groups of young people learning a huge range of activities and skills chosen by them from bug hunts to tree planting, and knife whittling to fire lighting and campfire cooking."
+const forestSchoolText2 = "The training was hard work with an enormous attention to detail to risk assess every "
+const stemLeadTitle = "Primary STEM and Computing Lead"
+const furnitureCraftTitle = "Furniture Craftsperson"
+
 // hamburger consts
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navlist');
