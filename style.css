@@ -1,0 +1,377 @@
+/* The gallery part of this code was based on a project from https://blog.logrocket.com/how-create-responsive-image-gallery-css-flexbox/ */
+/* The project that was used can be found at https://by9sfe.csb.app/ */
+
+/* ======================================
+Responsive Image gallery Style rules
+======================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800;900&display=swap');
+
+:root {
+  --navbar: rgba(230, 230, 230, 0.8);
+  --navText: rgba(43, 43, 44, 0.7);
+  --preOverlayLight: rgba(255, 255, 255, 0);
+  --preOverlayDarkText: rgba(43, 43, 44, 0);
+  --overlayLight: rgba(255, 255, 255, 0.8);
+  --overlayDarkText: rgba(43, 43, 44, 1);
+  --labelLightText: rgb(255, 255, 255);
+  --labelDark: rgba(43, 43, 44, 0.75);
+  --hamburgerMenu: rgba(230, 230, 230, 0.9);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.galleryContainer {
+  padding: 40px 5% 70px;
+}
+
+nav {
+  background-color: var(--navbar);
+  background-image: url('images/ropeBackground3.jpeg');
+  background-size: cover;
+  padding: 7px 0;
+  z-index: 0;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+  min-height: 65px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.navlist {
+  display: flex;
+  justify-content: end;
+  max-width: 815px;
+}
+
+.navlist p {
+  color: var(--navText);
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.link {
+  flex-basis: 60px;
+  text-align: center;
+  margin: 0 8px;
+}
+
+.longlink1 {flex-basis: 80px;}
+.longlink2 {flex-basis: 145px;}
+.shortlink1 {flex-basis: 50px;}
+.shortlink2 {flex-basis: 40px;}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.burgerBar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--navText);
+  z-index: 1;
+}
+
+nav h1 {
+  font-size: 2.2rem;
+  font-weight: normal;
+  flex: 1 400px;
+  color: var(--navText);
+  transition: color 7s ease;
+}
+
+nav li {
+  font-weight: bold;
+}
+
+nav img {
+  max-width: 80px;
+  margin-right: 15px;
+  opacity: 0.5;
+  transition: opacity 4s ease;
+}
+
+nav img:hover {
+  opacity: 0.1;
+}
+
+nav img:hover ~ h1 {
+  color: #adfe2f;
+}
+
+.heading-text {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.heading-text span {
+  font-weight: 100;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Responsive image gallery rules begin*/
+
+section {
+  background-color: rgba(230, 230, 230, 0.8);
+  transition: background-color 3s ease;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image-gallery > li {
+  /* flex-basis: 350px;  */
+  flex: 1 300px;
+  position: relative;
+  cursor: pointer;
+  max-height: 300px;
+}
+
+.image-gallery li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 25px;
+}
+
+.knotlabel {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background-color: var(--labelDark);
+  top: 0;
+  left: 0;
+  transition: all 0.8s ease-in-out;
+  color: var(--labelLightText);
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.long {
+  font-size: 1.35rem;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--preOverlayLight);
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+  color: var(--preOverlayDarkText);
+  border: 0px var(--labelDark) solid;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* hover */
+/* .image-gallery li:hover .overlay {
+  background-color: var(--overlayLight);
+  color: var(--overlayLightText);
+  border: 1px var(--labelDark) solid;
+}
+
+.image-gallery li:hover .knotlabel {
+  background-color: var(--preOverlayLight);
+  color: var(--preOverlayDarkText); 
+} */
+
+/* infoActive */
+.infoActiveOverlay {
+  background-color: var(--overlayLight);
+  color: var(--overlayLightText);
+  border: 1px var(--labelDark) solid;
+}
+
+.infoActiveKnotlabel {
+  /* transform: scale(0); */
+  background-color: var(--preOverlayLight);
+  color: var(--preOverlayDarkText); 
+}
+
+#videoSection {
+  background-color: var(--navbar);
+  background-image: url('images/ropeBackground3.jpeg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#btn {
+  text-align: center;
+  margin: 20px auto;
+  padding: 8px 15px;
+  background-color: var(--labelLightText);
+  color: var(--labelDark);
+  border-radius: 5px;
+  border: 1px #ccc solid;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.videoContainer {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0 0 20px;
+}
+
+.iframe-container{
+  position: relative;
+  max-width: 840px;
+  max-height: 473px;
+  width: 80vw;
+  margin: 0 auto 0;
+  padding-bottom: 33%; 
+  height: 0;
+  border: 1px var(--labelDark) solid;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
+  transition: padding-bottom 1s ease;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1500px) {
+  .iframe-container {
+    padding-bottom: 40%;
+  }
+}
+@media (max-width: 1400px) {
+  .navContainer {
+    max-width: 100vw;
+  }
+  nav h1 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 1250px) {
+  .iframe-container {
+    padding-bottom: 47%;
+  }
+  nav h1 {
+    display: none;
+  }
+}
+@media (max-width: 980px) {
+  nav h1 {
+    display: block;
+  }
+  .iframe-container {
+    padding-bottom: 55%;
+    width: 90vw;
+  }
+  nav {
+    padding: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .burgerBar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .burgerBar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .burgerBar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .link {
+    flex-basis: 40px;
+  }
+
+  .navlist {
+    position: fixed;
+    /* left: 100%; */
+    top: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--hamburgerMenu);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    transition: opacity 0.8s ease;
+    z-index: 1;
+    padding-top: 10px;
+    opacity: 0;
+  }
+  nav p {
+    margin: 16px 0;
+  }
+  .navlist.active {
+    left: 0;
+    top: 65px;
+    opacity: 1;
+  }
+}
+@media (max-width: 650px) {
+  .iframe-container {
+    padding-bottom: 60%;
+    width: 95vw;
+  }
+}

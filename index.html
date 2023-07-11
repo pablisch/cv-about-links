@@ -1,0 +1,190 @@
+<!-- The gallery part of this code was based on a project from https://blog.logrocket.com/how-create-responsive-image-gallery-css-flexbox/
+The project that was used can be found at https://by9sfe.csb.app/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Knot Very Useful</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="images/knoticon5.png" />
+  </head>
+  <body>
+    <nav>
+      <div class="navContainer">
+        <div class="navItem logo">
+          <img
+            class="logoImage"
+            src="images/knotIconDarkArrow.png"
+            alt="knot icon"
+          />
+          <h1>Knot Very Useful</h1>
+        </div>
+        <div class="navlist">
+          <p class="link longlink2">Edge of Space Explorer</p>
+          <p class="link">Timber Hitch</p>
+          <p class="link shortlink1">Clove Hitch</p>
+          <p class="link longlink1">Taut Tarp Hitch</p>
+          <p class="link shortlink1">Figure Eight</p>
+          <p class="link">Bowline Knot</p>
+          <p class="link shortlink2">Reef Knot</p>
+          <p class="link longlink2">Round Turn & Two Half Hitches</p>
+          <p class="link shortlink1">Sheet Bend</p>
+          <p class="link">Square Lashing</p>
+        </div>
+        <div class="hamburger">
+          <span class="burgerBar"></span>
+          <span class="burgerBar"></span>
+          <span class="burgerBar"></span>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="galleryContainer">
+        <ul class="image-gallery">
+          <!-- 👆🏼 FLEXBOX applied to UL 👆🏼 -->
+          <!-- 👇🏼 ALL LI elements are FLEX ITEMS 👇🏼 -->
+          <li class="knotPanel">
+            <img src="images/tarpTidySquare.png" alt="" />
+            <div class="knotlabel"><span>Edge of Space Explorer</span></div>
+            <div class="overlay" id="tarp">
+              <span id="tarp2"
+                >The tarp tidy is great for tidying lengths of cord and guy
+                ropes, either attached or on their own.</span
+              >
+            </div>
+          </li>
+          <!-- 🎃🎃🎃 Each LI contains: 🎃🎃🎃 -->
+          <!-- 1. an image -->
+          <!-- 2. a div with the class, OVERLAY -->
+          <li class="knotPanel">
+            <img src="images/timberHitchSquare.png" alt="" />
+            <div class="knotlabel"><span>Timber Hitch</span></div>
+            <div class="overlay" id="timber">
+              <span id="timber2"
+                >The timber hitch can be used to attach a rope to an object.
+                Quick to tie and very easy to undo.</span
+              >
+            </div>
+          </li>
+          <li class="knotPanel">
+            <img src="images/cloveHitchSquare.png" alt="" />
+            <div class="knotlabel"><span>Clove Hitch</span></div>
+            <div class="overlay" id="clove">
+              <span id="clove2"
+                >The clove hitch can be used to quickly attach a rope or cord to
+                an object, such as a mooring point.</span
+              >
+            </div>
+          </li>
+          <li class="knotPanel">
+            <img src="images/tautTarpHitchSquare.png" alt="" />
+            <div class="knotlabel"><span>Taut Tarp Hitch</span></div>
+            <div class="overlay" id="taut">
+              <span id="taut2"
+                >The taut tarp hitch can be used to attach a rope or cord to an
+                object and create tension resulting in a taut line.</span
+              >
+            </div>
+          </li>
+          <li class="knotPanel">
+            <img src="images/figureEightStopSquare.png" alt="" />
+            <div class="knotlabel"><span>Figure Eight Knot</span></div>
+            <div class="overlay" id="figure">
+              <span id="figure2"
+                >The figure eight knot can be used as a stopper knot to stop
+                rope slippage. Doubling back on the figure eight creates a
+                strong fixed loop.</span
+              >
+            </div>
+          </li>
+          <li class="knotPanel">
+            <img src="images/bowlineSquare.png" alt="" />
+            <div class="knotlabel"><span>Bowline Knot</span></div>
+            <div class="overlay" id="bowline">
+              <span id="bowline2"
+                >The bowline knot can be used to make a fixed loop at the end of
+                a rope. It is easier to undo than a figure eight knot.</span
+              >
+            </div>
+          </li>
+          <li class="knotPanel">
+            <img src="images/reefKnotSquare.png" alt="" />
+            <div class="knotlabel"><span>Reef Knot</span></div>
+            <div class="overlay" id="reef">
+              <span id="reef2"
+                >The reef knot can be used to join two lengths of rope that are
+                the same material and thickness together.</span
+              >
+            </div>
+          </li>
+          <li class="knotPanel">
+            <img src="images/roundTurnAndTwoHalfHitchesSquare.png" alt="" />
+            <div class="knotlabel long">
+              <span>Round Turn & Two Half Hitches</span>
+            </div>
+            <div class="overlay" id="round">
+              <span id="round2"
+                >The round turn and two half hitches can be used to attach a
+                rope or cord to an object, such as a beam or a hook.</span
+              >
+            </div>
+          </li>
+
+          <li>
+            <img src="images/sheetBendSquare.png" alt="" />
+            <div class="knotlabel"><span>Sheet Bend</span></div>
+            <div class="overlay" id="sheet">
+              <span id="sheet2"
+                >The sheet bend can be used to join two lengths of rope of
+                different material or thickness together. The double sheet bend
+                is more secure.</span
+              >
+            </div>
+          </li>
+          <li>
+            <img src="images/squareLashingSquare.png" alt="" />
+            <div class="knotlabel"><span>Square Lashing</span></div>
+            <div class="overlay" id="square">
+              <span id="square2"
+                >A square lashing can be used to join two objects, such as
+                spars, poles and sticks, together. The join is usually
+                perpendicular.</span
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="videoSection">
+      <div class="upButton">
+        <button id="btn" onclick="backToTop()">
+          Click here or press RETURN to go back to top of the page
+        </button>
+      </div>
+
+      <div class="videoContainer">
+        <div class="iframe-container">
+          <iframe
+            id="videoPlaying"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/OsesfBOQ_Nc?rel=0"
+            title="CV link"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <p>&copy Pablo Joyce 2023</p>
+    </footer>
+
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
