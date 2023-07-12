@@ -1,7 +1,7 @@
-const knots = document.querySelectorAll('.overlay');
-const knotLabels = document.querySelectorAll('.panel-label');
-const navLinks = document.querySelectorAll('.nav-link');
-const midSection = document.querySelector('body');
+const panelTopics = document.querySelectorAll('.overlay'); // all topic panels
+const panelTitles = document.querySelectorAll('.panel-label'); // all panel labels
+const navLinks = document.querySelectorAll('.nav-link'); // all nav links
+const midSection = document.querySelector('.galleryContainer'); // for all active quirk
 
 const space = 'OsesfBOQ_Nc';
 const forest = 'OsesfBOQ_Nc';
@@ -9,10 +9,6 @@ const stem = 'Bl9DLOFJJ4A';
 const fsl = 'MUBRINtBDPk';
 const furniture = 'mjptxOrdr_g';
 const learn = '0F4HrjeIsYY';
-const reef = '4tE_L5I3Z7U';
-const round = 'ZhTOt1GcFGI';
-const sheet = 'o9Kgs4PdPiw';
-const square = 'z-lydqHKVdw';
 
 const spaceTitle = 'Edge of Space Explorer';
 const spaceText1 =
@@ -43,25 +39,25 @@ document.addEventListener('keyup', function (event) {
   }
 });
 
-// Listen for knot panel click - get vid ID
-knots.forEach((knot) => {
-  knot.addEventListener('click', (chooseFocus) => {
-    let panelLinkID = chooseFocus.target.id;
+// Listen for topic panel click - get vid ID
+panelTopics.forEach((topic) => {
+  topic.addEventListener('click', (panelClickedEvent) => {
+    let panelLinkID = panelClickedEvent.target.id;
     findFocusFromPanelLink(panelLinkID);
   });
 });
 
 // Listen for nav link click - get vid ID
 navLinks.forEach((link) => {
-  link.addEventListener('click', (chooseFocus) => {
-    let navLinkID = chooseFocus.target.innerHTML;
-    findFocusFromNavLink(navLinkID);
+  link.addEventListener('click', (navLinkClickedEvent) => {
+    let navLinkText = navLinkClickedEvent.target.innerHTML;
+    findFocusKeyFromNavLink(navLinkText);
   });
 });
 
-// Listen for knot panel mouseover - set active classes
-knots.forEach((knot) => {
-  knot.addEventListener('mouseover', (hoverOn) => {
+// Listen for topic panel mouseover - set active classes
+panelTopics.forEach((topic) => {
+  topic.addEventListener('mouseover', (hoverOn) => {
     let panelLinkID = hoverOn.target.id;
     indexfromPanel(panelLinkID);
   });
@@ -70,14 +66,14 @@ knots.forEach((knot) => {
 // Listen for nav link mouseover - set active classes
 navLinks.forEach((link) => {
   link.addEventListener('mouseover', (hoverOn) => {
-    let navLinkID = hoverOn.target.innerHTML;
-    indexfromLink(navLinkID);
+    let navLinkText = hoverOn.target.innerHTML;
+    indexfromLink(navLinkText);
   });
 });
 
-// Listen for knot panel mouseOUT - set active classes
-knots.forEach((knot) => {
-  knot.addEventListener('mouseout', (hoverOff) => {
+// Listen for topic panel mouseOUT - set active classes
+panelTopics.forEach((topic) => {
+  topic.addEventListener('mouseout', (hoverOff) => {
     clearActive();
   });
 });
@@ -104,14 +100,14 @@ document
   });
 
 // FUNCTION - select FOCUS and scroll down
-function whichFocus(vidSrc) {
-  document.querySelector('#videoPlaying').src = vidSrc;
-  window.scrollTo(0, document.body.scrollHeight);
+function whichFocus(focusSrc) {
+  document.querySelector('#focusPage').src = focusSrc; // #focusPage is the id of the iframe
+  window.scrollTo(0, document.body.scrollHeight); // scrolls to bottom of the page
 }
 
 // FUNCTION - get FOCUS source from topic panel target
 function findFocusFromPanelLink(whichPanelLink) {
-  let vidID =
+  let focusKey =
     whichPanelLink == 'space'
       ? space
       : whichPanelLink == 'space2'
@@ -137,40 +133,31 @@ function findFocusFromPanelLink(whichPanelLink) {
       : whichPanelLink == 'learn2'
       ? learn
       : sheet;
-  console.log(vidID);
-  let vidSrc = `https://www.youtube.com/embed/${vidID}?rel=0`;
-  whichFocus(vidSrc);
+  console.log(focusKey);
+  let focusSrc = `https://www.youtube.com/embed/${focusKey}?rel=0`;
+  whichFocus(focusSrc);
 }
 
 // FUNCTION - get vid source from nav link target
-function findFocusFromNavLink(whichNavLink) {
-  let vidID =
-    whichNavLink == 'Tarp Tidy'
+function findFocusKeyFromNavLink(whichNavLink) {
+  let focusKey =
+    whichNavLink == 'Edge of Space Explorer'
       ? space
-      : whichNavLink == 'Timber Hitch'
+      : whichNavLink == 'Forest Creator'
       ? forest
-      : whichNavLink == 'Clove Hitch'
+      : whichNavLink == 'Primary STEM and Computing Lead'
       ? stem
-      : whichNavLink == 'Taut Tarp Hitch'
+      : whichNavLink == 'Forest School Leader'
       ? fsl
-      : whichNavLink == 'Figure Eight'
+      : whichNavLink == 'Furniture Craftsperson'
       ? furniture
-      : whichNavLink == 'Bowline Knot'
+      : whichNavLink == 'Lifelong Learner'
       ? learn
-      : whichNavLink == 'Reef Knot'
-      ? reef
-      : whichNavLink == 'Round Turn &amp; Two Half Hitches'
-      ? round
-      : whichNavLink == 'Sheet Bend'
-      ? sheet
-      : whichNavLink == 'Square Lashing'
-      ? square
-      : sheet;
-  console.log(vidID);
-  let vidSrc = `https://www.youtube.com/embed/${vidID}?rel=0`;
-  console.log(`src is ${vidSrc}`);
-  console.log(vidSrc);
-  whichFocus(vidSrc);
+      : whichNavLink == 'Software Projects (coming soon)'
+      ? projects
+      : space;
+  let focusSrc = `https://www.youtube.com/embed/${focusKey}?rel=0`;
+  whichFocus(focusSrc);
 }
 
 // FUNCTION - get array index from panel target
@@ -245,44 +232,44 @@ navLinks.forEach((link) =>
 
 // FUNCTION - set infoActive classes
 function activePanel(whichPanel) {
-  knots[whichPanel].classList.add('infoActiveOverlay');
-  knotLabels[whichPanel].classList.add('infoActiveKnotlabel');
+  panelTopics[whichPanel].classList.add('infoActiveOverlay');
+  panelTitles[whichPanel].classList.add('infoActiveKnotlabel');
 }
 
 // REMOVE ALL infoActive classes
 function clearActive() {
-  knots.forEach((knot) => {
-    knot.classList.remove('infoActiveOverlay');
+  panelTopics.forEach((topic) => {
+    topic.classList.remove('infoActiveOverlay');
   });
-  knotLabels.forEach((label) => {
+  panelTitles.forEach((label) => {
     label.classList.remove('infoActiveKnotlabel');
   });
 }
 
 // APPLY infoActive to ALL panels + apply long transitions
 function allActive() {
-  knots.forEach((knot) => {
-    knot.style.transition = 'all 1s ease-in-out';
-    knot.classList.add('infoActiveOverlay');
+  panelTopics.forEach((topic) => {
+    topic.style.transition = 'all 1s ease-in-out';
+    topic.classList.add('infoActiveOverlay');
   });
-  knotLabels.forEach((label) => {
+  panelTitles.forEach((label) => {
     label.style.transition = 'all 4s ease-in-out';
     label.classList.add('infoActiveKnotlabel');
   });
-  midSection.style.backgroundColor = 'rgba(8, 11, 15, 0.85)';
-  midSection.style.transition = 'background-color 10s ease';
+  midSection.style.backgroundColor = '#68b0ab';
+  midSection.style.transition = 'background-color 4s ease';
 }
 
 // REMOVE ALL infoActive classes + apply normal transitions
 function clearAllActive() {
-  knots.forEach((knot) => {
-    knot.style.transition = 'all 0.4s ease-in-out';
-    knot.classList.remove('infoActiveOverlay');
+  panelTopics.forEach((topic) => {
+    topic.style.transition = 'all 0.4s ease-in-out';
+    topic.classList.remove('infoActiveOverlay');
   });
-  knotLabels.forEach((label) => {
+  panelTitles.forEach((label) => {
     label.style.transition = 'all 0.8s ease-in-out';
     label.classList.remove('infoActiveKnotlabel');
   });
-  midSection.style.backgroundColor = 'rgba(230, 230, 230, 0.8)';
+  midSection.style.backgroundColor = '#faf3dd';
   midSection.style.transition = 'background-color 3s ease';
 }

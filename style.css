@@ -170,7 +170,6 @@ ul {
 /* Responsive image gallery rules begin*/
 
 section {
-  /* background-color: rgba(230, 230, 230, 0.8); */
   background-color: var(--green1);
   transition: background-color 3s ease;
 }
