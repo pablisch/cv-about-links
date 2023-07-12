@@ -162,8 +162,8 @@ function setFocusInfo(focusKey) {
     focusPara1 = "I have been incredibly lucky to have had such a varied teaching career full of amazing projects and opportunities. I was tasked to create a STEM makers workshop for a Tottenham primary school and my first job was to design a series of 'WOW' projects to inspire the children and get them excited about STEM. We had huge amounts of fun and learning with water bottle rockets, effervescent cannons, wind-powered cars and balloon-popping robot wars.";
     focusPara2 = 'Over the next couple of years we hosted multi-school STEM events and won every STEM competition and award that we enetered.';
   } else if (focusKey === 'fsl') {
-    focusPageMessage = 'No Message';
-    focusUrl = 'https://www.google.com/maps/@51.5256196,0.0546578,14z?entry=ttu';
+    focusPageMessage = 'Click on compressed image panels to expand them';
+    focusUrl = 'https://pablisch.github.io/forest-school-images-expanding/';
     focusTitle = 'Forest School Leader';
     focusPara1 = "I was aksed 'make Forest School happen' at my primary school and despite being way outside my knowledge or comfort zone, I was excited to take on this challenge and so started a four year journey of planning and implenting all aspects of Forest School including Hundreds of pages of risk and benefit assessments.";
     focusPara2 = 'It was a joy to train and work as a Forest School Leader helping our children learn a huge range of activities and skills chosen by them from bug hunts to tree planting, and knife whittling to fire lighting and campfire cooking. Such a privilege to be able to see them growth and develop and for some children, just find a reason to get up and come to school!';
@@ -174,18 +174,18 @@ function setFocusInfo(focusKey) {
     focusPara1 = 'Following a lifelong passion for making and crafts, I took a degree in Furniture Design and Craftsmanship on the renowned Buckinghamshire New University course in High Wycombe. Following a few years working in professional craft workshops making one-off pieces for clients such as David Linley and Lily Curtis, I spent a decade as a self-employed furniture maker on a range bespoke projects for lovely artists, musicians and other creatives, such as Nigel Godrich, Garth Jennings and Joby Talbot.';
     focusPara2 = 'The urge to create has never left me and spills out into carving, book-binding, small sculptural pieces and into the digital world.';
   } else if (focusKey === 'learn') {
-    focusPageMessage = 'No Message';
-    focusUrl = 'https://pablisch.github.io/knot-very-useful/';
+    focusPageMessage = 'Hover over any image panel to expand it';
+    focusUrl = 'https://pablisch.github.io/travel-images-picture-pad/';
     focusTitle = 'Lifelong Learner';
     focusPara1 = 'I was privileged to get the amazing oportunity of sending a Raspberry Pi computer to the edge of space using a high-altitude balloon as primary school anniversary celebration project. The payload included a range of cameras programmed in python to record a mix of video and images and send live images back to Earth, a GPS unit to track the journey and transmitter to send back live telemetry of the flight.';
     focusPara2 = 'On the ground, we followed th progress in a minibus, making live predictions about the landing site and quickly retrieved the payload that came hurtling back to Earth to land safely in a wheat field.';
   } else {
     console.log('no focusKey found')
-    focusPageMessage = 'No Message';
-    focusUrl = 'https://pablisch.github.io/knot-very-useful/';
-    focusTitle = 'March Wood';
-    focusPara1 = 'The largest barrier to setting up Forest School at my primary school was the profound lack of trees so I planted a brand new baby woodland that become known as March Wood. There were no end of challenges including funds and resources, unmoveable deadlines, the reality of how long natures take to grow what you want as well as how quickly it grows what you definitely do not want, and helping saplings survive the long, hot summer holidays when the school is closed.';
-    focusPara2 = 'It took passion, dedication and resilience, espically in the midst of the pandemic lockdowns, but March Wood has thrived, tiny saplings now tower over me and we have an amazing outdoor classroom for all the school to enjoy.';
+    focusPageMessage = 'Hover over any image panel to expand it';
+    focusUrl = 'https://pablisch.github.io/travel-images-picture-pad/';
+    focusTitle = 'Lifelong Learner';
+    focusPara1 = 'I was privileged to get the amazing oportunity of sending a Raspberry Pi computer to the edge of space using a high-altitude balloon as primary school anniversary celebration project. The payload included a range of cameras programmed in python to record a mix of video and images and send live images back to Earth, a GPS unit to track the journey and transmitter to send back live telemetry of the flight.';
+    focusPara2 = 'On the ground, we followed th progress in a minibus, making live predictions about the landing site and quickly retrieved the payload that came hurtling back to Earth to land safely in a wheat field.';
   }
   loadFocusInfo();
 }
