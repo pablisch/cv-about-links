@@ -3,12 +3,12 @@ const panelTitles = document.querySelectorAll('.panel-label'); // all panel labe
 const navLinks = document.querySelectorAll('.nav-link'); // all nav links
 const midSection = document.querySelector('.galleryContainer'); // for all active quirk
 
-const space = 'OsesfBOQ_Nc';
-const forest = 'OsesfBOQ_Nc';
-const stem = 'Bl9DLOFJJ4A';
-const fsl = 'MUBRINtBDPk';
-const furniture = 'mjptxOrdr_g';
-const learn = '0F4HrjeIsYY';
+const space = 'space';
+const forest = 'forest';
+const stem = 'stem';
+const fsl = 'fsl';
+const furniture = 'furniture';
+const learn = 'learn';
 
 const spaceTitle = 'Edge of Space Explorer';
 const spaceText1 =
@@ -99,12 +99,6 @@ document
     clearAllActive();
   });
 
-// FUNCTION - select FOCUS and scroll down
-function whichFocus(focusSrc) {
-  document.querySelector('#focusPage').src = focusSrc; // #focusPage is the id of the iframe
-  window.scrollTo(0, document.body.scrollHeight); // scrolls to bottom of the page
-}
-
 // FUNCTION - get FOCUS source from topic panel target
 function findFocusFromPanelLink(whichPanelLink) {
   let focusKey =
@@ -133,9 +127,7 @@ function findFocusFromPanelLink(whichPanelLink) {
       : whichPanelLink == 'learn2'
       ? learn
       : sheet;
-  console.log(focusKey);
-  let focusSrc = `https://www.youtube.com/embed/${focusKey}?rel=0`;
-  whichFocus(focusSrc);
+  setFocusInfo(focusKey);
 }
 
 // FUNCTION - get vid source from nav link target
@@ -156,8 +148,64 @@ function findFocusKeyFromNavLink(whichNavLink) {
       : whichNavLink == 'Software Projects (coming soon)'
       ? projects
       : space;
-  let focusSrc = `https://www.youtube.com/embed/${focusKey}?rel=0`;
-  whichFocus(focusSrc);
+  setFocusInfo(focusKey);
+}
+
+// FUNCTION - set focus information according to focusKey (which panel or link was clicked)
+function setFocusInfo(focusKey) {
+  console.log('focusKey is ' + focusKey)
+  let focusUrl
+  let focusTitle
+  let focusPara1
+  let focusPara2
+
+  if (focusKey === 'space') {
+    focusPageMessage = 'No Message';
+    focusUrl = 'https://www.youtube.com/embed/OsesfBOQ_Nc?rel=0';
+    focusTitle = 'Edge of Space Explorer';
+    focusPara1 = 'I was privileged to get the amazing oportunity of sending a Raspberry Pi computer to the edge of space using a high-altitude balloon as primary school anniversary celebration project. The payload included a range of cameras programmed in python to record a mix of video and images and send live images back to Earth, a GPS unit to track the journey and transmitter to send back live telemetry of the flight.';
+    focusPara2 = 'On the ground, we followed th progress in a minibus, making live predictions about the landing site and quickly retrieved the payload that came hurtling back to Earth to land safely in a wheat field.';
+  } else if (focusKey === 'forest') {
+    focusPageMessage = 'No Message';
+    focusUrl = 'https://www.youtube.com/embed/OsesfBOQ_Nc?rel=0';
+    focusTitle = 'Forest Creator';
+    focusPara1 = 'The largest barrier to setting up Forest School at my primary school was the profound lack of trees so I planted a brand new baby woodland that become known as March Wood. There were no end of challenges including funds and resources, unmoveable deadlines, the reality of how long natures take to grow what you want as well as how quickly it grows what you definitely do not want, and helping saplings survive the long, hot summer holidays when the school is closed.';
+    focusPara2 = 'It took passion, dedication and resilience, espically in the midst of the pandemic lockdowns, but March Wood has thrived, tiny saplings now tower over me and we have an amazing outdoor classroom for all the school to enjoy.';
+  } else if (focusKey === 'stem') {
+    focusPageMessage = 'No Message';
+    focusUrl = 'https://www.youtube.com/embed/Bl9DLOFJJ4A?rel=0';
+    focusTitle = 'Primary STEM and Computing Lead';
+    focusPara1 = 'I was privileged to get the amazing oportunity of sending a Raspberry Pi computer to the edge of space using a high-altitude balloon as primary school anniversary celebration project. The payload included a range of cameras programmed in python to record a mix of video and images and send live images back to Earth, a GPS unit to track the journey and transmitter to send back live telemetry of the flight.';
+    focusPara2 = 'On the ground, we followed th progress in a minibus, making live predictions about the landing site and quickly retrieved the payload that came hurtling back to Earth to land safely in a wheat field.';
+  } else if (focusKey === 'fsl') {
+    focusPageMessage = 'No Message';
+    focusUrl = 'https://www.google.com/maps/@51.5256196,0.0546578,14z?entry=ttu';
+    focusTitle = 'Forest School Leader';
+    focusPara1 = 'It was a joy to train and work as a Forest School Leader at a school in Tottenham, working with groups of young people learning a huge range of activities and skills chosen by them from bug hunts to tree planting, and knife whittling to fire lighting and campfire cooking.';
+    focusPara2 = 'The training was hard work with an enormous attention to detail to risk assess every ';
+  } else if (focusKey === 'furniture') {
+    focusPageMessage = 'No Message';
+    focusUrl = 'https://pablisch.github.io/furniture-portfolio-expanding/';
+    focusTitle = 'Furniture Craftsperson';
+    focusPara1 = 'I was privileged to get the amazing oportunity of sending a Raspberry Pi computer to the edge of space using a high-altitude balloon as primary school anniversary celebration project. The payload included a range of cameras programmed in python to record a mix of video and images and send live images back to Earth, a GPS unit to track the journey and transmitter to send back live telemetry of the flight.';
+    focusPara2 = 'On the ground, we followed th progress in a minibus, making live predictions about the landing site and quickly retrieved the payload that came hurtling back to Earth to land safely in a wheat field.';
+  } else if (focusKey === 'learn') {
+    focusPageMessage = 'No Message';
+    focusUrl = 'https://pablisch.github.io/knot-very-useful/';
+    focusTitle = 'Lifelong Learner';
+    focusPara1 = 'I was privileged to get the amazing oportunity of sending a Raspberry Pi computer to the edge of space using a high-altitude balloon as primary school anniversary celebration project. The payload included a range of cameras programmed in python to record a mix of video and images and send live images back to Earth, a GPS unit to track the journey and transmitter to send back live telemetry of the flight.';
+    focusPara2 = 'On the ground, we followed th progress in a minibus, making live predictions about the landing site and quickly retrieved the payload that came hurtling back to Earth to land safely in a wheat field.';
+  } else {
+    console.log('no focusKey found')
+    focusPageMessage = 'No Message';
+    focusUrl = 'https://pablisch.github.io/knot-very-useful/';
+    focusTitle = 'March Wood';
+    focusPara1 = 'The largest barrier to setting up Forest School at my primary school was the profound lack of trees so I planted a brand new baby woodland that become known as March Wood. There were no end of challenges including funds and resources, unmoveable deadlines, the reality of how long natures take to grow what you want as well as how quickly it grows what you definitely do not want, and helping saplings survive the long, hot summer holidays when the school is closed.';
+    focusPara2 = 'It took passion, dedication and resilience, espically in the midst of the pandemic lockdowns, but March Wood has thrived, tiny saplings now tower over me and we have an amazing outdoor classroom for all the school to enjoy.';
+  }
+  document.querySelector('#focusPage').src = focusUrl; // #focusPage is the id of the iframe
+  window.scrollTo(0, document.body.scrollHeight); // scrolls to bottom of the page
+
 }
 
 // FUNCTION - get array index from panel target
