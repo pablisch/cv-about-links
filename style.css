@@ -91,7 +91,7 @@ nav {
   font-weight: bold;
 }
 
-.link {
+.nav-link {
   flex-basis: 60px;
   text-align: center;
   margin: 0 8px;
@@ -314,7 +314,8 @@ section {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
 
-.focus-frame { /* Currently contains only the iframe-container div */
+.focus-frame {
+  /* Currently contains only the iframe-container div */
   /* width: 100vw; */
   /* margin: 0 auto; */
   min-height: 10vh;
@@ -393,11 +394,9 @@ footer p {
   .hamburger.active .burgerBar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
-  .link {
+  .nav-link {
     flex-basis: 40px;
   }
-
   .navlist {
     position: fixed;
     /* left: 100%; */
@@ -422,6 +421,7 @@ footer p {
     opacity: 1;
   }
 }
+
 @media (max-width: 650px) {
   .iframe-container {
     padding-bottom: 60%;
