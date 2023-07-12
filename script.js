@@ -94,7 +94,7 @@ document.querySelector('.logoImage').addEventListener('mouseout', logoHoverOFF =
   clearAllActive();
 })
 
-// FUNCTION - select video and scroll down
+// FUNCTION - select FOCUS and scroll down
 function whichVideo(vidSrc) {
   document.querySelector('#videoPlaying').src = vidSrc;
   window.scrollTo(0, document.body.scrollHeight);
