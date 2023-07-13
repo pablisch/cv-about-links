@@ -53,6 +53,7 @@ html {
 
 body {
   font-family: 'Raleway', sans-serif;
+  color: var(--navText);
 }
 
 /* NAVBAR */
@@ -165,7 +166,7 @@ nav img:hover ~ h1 {
 }
 
 .galleryContainer {
-  padding: 40px 5% 70px;
+  padding: 40px 5% 40px;
 }
 
 .image-gallery {
@@ -292,7 +293,7 @@ nav img:hover ~ h1 {
 #focus-para-1, #focus-para-2 {
   margin: 0 auto;
   margin-bottom: 15px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 #up-btn {
@@ -350,9 +351,30 @@ footer p {
 
 /* RESPONSIVE */
 
+@media (max-width: 1900px) {
+  .iframe-container {
+    padding-bottom: calc(50%);
+  }
+  #focus-para-1, #focus-para-2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1750px) {
+  .iframe-container {
+    padding-bottom: calc(52%);
+  }
+  #focus-para-1, #focus-para-2 {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 1600px) {
   .iframe-container {
     padding-bottom: calc(55%);
+  }
+  #focus-para-1, #focus-para-2 {
+    font-size: 1.1rem;
   }
 }
 
