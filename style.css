@@ -33,6 +33,9 @@ Responsive Image gallery Style rules
   --green4: #68b0ab;
   --green5: #696d7d;
   --green6: #2d2e35;
+
+  --brown: #ac9a7a;
+  --fawn: #c2b6a3;
 }
 
 .bold {
@@ -54,6 +57,16 @@ html {
 body {
   font-family: 'Raleway', sans-serif;
   color: var(--navText);
+}
+
+.break-line {
+  background-color: var(--brown);
+  height: 1px;
+}
+
+.break-line2 {
+  background-color: var(--fawn);
+  height: 3px;
 }
 
 /* NAVBAR */
