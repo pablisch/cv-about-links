@@ -90,51 +90,49 @@ document
 function findFocusFromPanelLink(whichPanelLink) {
   let focusKey =
     whichPanelLink == 'space'
-      ? space
+      ? 0
       : whichPanelLink == 'space2'
-      ? space
+      ? 0
       : whichPanelLink == 'forest'
-      ? forest
+      ? 1
       : whichPanelLink == 'forest2'
-      ? forest
+      ? 1
       : whichPanelLink == 'stem'
-      ? stem
+      ? 2
       : whichPanelLink == 'stem2'
-      ? stem
+      ? 2
       : whichPanelLink == 'fsl'
-      ? fsl
+      ? 3
       : whichPanelLink == 'fsl2'
-      ? fsl
+      ? 3
       : whichPanelLink == 'furniture'
-      ? furniture
+      ? 4
       : whichPanelLink == 'furniture2'
-      ? furniture
+      ? 4
       : whichPanelLink == 'learn'
-      ? learn
+      ? 5
       : whichPanelLink == 'learn2'
-      ? learn
-      : sheet;
+      ? 5
+      : 4;
   setFocusInfo(focusKey);
 }
 
 // FUNCTION - get vid source from nav link target
 function findFocusKeyFromNavLink(whichNavLink) {
   let focusKey =
-    whichNavLink == 'Edge of Space Explorer'
-      ? space
+    whichNavLink == 'Space Explorer'
+      ? 0
       : whichNavLink == 'Forest Creator'
-      ? forest
-      : whichNavLink == 'Primary STEM and Computing Lead'
-      ? stem
+      ? 1
+      : whichNavLink == 'Primary STEM Lead'
+      ? 2
       : whichNavLink == 'Forest School Leader'
-      ? fsl
-      : whichNavLink == 'Furniture Craftsperson'
-      ? furniture
-      : whichNavLink == 'Lifelong Learner'
-      ? learn
-      : whichNavLink == 'Software Projects (coming soon)'
-      ? projects
-      : space;
+      ? 3
+      : whichNavLink == 'Furniture Crafts'
+      ? 4
+      : whichNavLink == 'Lifelong Learning'
+      ? 5
+      : 4;
   setFocusInfo(focusKey);
 }
 
@@ -142,7 +140,7 @@ function findFocusKeyFromNavLink(whichNavLink) {
 function setFocusInfo(focusKey) {
   console.log('focusKey is ' + focusKey);
 
-  if (focusKey === 'space') { // SPACE
+  if (focusKey === 0) { // SPACE
     console.log('space is the place');
     focusPageMessage =
       'This video shows that moment that the payload reached the edge of space and the balloon burst, sending the payload hurtling back to Earth.';
@@ -153,7 +151,7 @@ function setFocusInfo(focusKey) {
     focusPara2 =
       'On the ground, we chased the flight in a minibus, making live predictions about the landing site so we could quickly retrieve the payload as it came hurtling back to Earth and landed safely in a wheat field.';
     
-  } else if (focusKey === 'forest') { // FOREST
+  } else if (focusKey === 1) { // FOREST
     focusPageMessage =
       'Pan around the 360 degree view of March Wood including right up to the sky and down to the ground. This image was taken when March Wood was just a couple of years old.';
     focusUrl = 'https://pablisch.github.io/MarchWood/';
@@ -163,7 +161,7 @@ function setFocusInfo(focusKey) {
     focusPara2 =
       'It took passion, dedication and resilience, especially in the midst of the pandemic lockdowns, but March Wood has thrived, tiny saplings now tower over me and we have an amazing outdoor classroom for all the school to enjoy, not to mention and incredible legacy woodland.';
     
-  } else if (focusKey === 'stem') { // STEM
+  } else if (focusKey === 2) { // STEM
     focusPageMessage =
       'The robots we used were designed, built and programmed by the children that drove them.';
     focusUrl = 'https://www.youtube.com/embed/CG7WkIYNqQA?rel=0&autoplay=1';
@@ -173,7 +171,7 @@ function setFocusInfo(focusKey) {
     focusPara2 =
       'Over the next couple of years we hosted multi-school STEM events and won every STEM competition and award that we enetered.';
     
-  } else if (focusKey === 'fsl') { // FOREST SCHOOL LEADER
+  } else if (focusKey === 3) { // FOREST SCHOOL LEADER
     focusPageMessage = 'Click on compressed image panels to expand them';
     focusUrl = 'https://pablisch.github.io/forest-school-images-expanding/';
     focusHeading = 'Forest School Leader';
@@ -182,7 +180,7 @@ function setFocusInfo(focusKey) {
     focusPara2 =
       'It was a joy to train and work as a Forest School Leader helping our children learn a huge range of activities and skills chosen by them from bug hunts to tree planting, and knife whittling to fire lighting and campfire cooking. Such a privilege to be able to see them growth and develop and for some children, just find a reason to get up and come to school!';
     
-  } else if (focusKey === 'furniture') { // FURNITURE
+  } else if (focusKey === 4) { // FURNITURE
     focusPageMessage = 'Click on compressed image panels to expand them';
     focusUrl = 'https://pablisch.github.io/furniture-portfolio-expanding/';
     focusHeading = 'Furniture Designer & Maker';
@@ -191,7 +189,7 @@ function setFocusInfo(focusKey) {
     focusPara2 =
       'The urge to create has never left me and spills out into carving, book-binding, small sculptural pieces and into the digital world.';
     
-  } else if (focusKey === 'learn') { // LEARNING AND CURIOSITY
+  } else if (focusKey === 5) { // LEARNING AND CURIOSITY
     focusPageMessage = 'Hover over any image panel to expand it';
     focusUrl = 'https://pablisch.github.io/travel-images-picture-pad/';
     focusHeading = 'Lifelong Learning & Curiosity';
@@ -258,21 +256,20 @@ function indexfromPanel(panelHover) {
 // FUNCTION - get array index from link target
 function indexfromLink(linkHover) {
   let index =
-    linkHover == 'Edge of Space Explorer'
+    linkHover == 'Space Explorer'
       ? 0
       : linkHover == 'Forest Creator'
       ? 1
-      : linkHover == 'Primary STEM and Computing Lead'
+      : linkHover == 'Primary STEM Lead'
       ? 2
       : linkHover == 'Forest School Leader'
       ? 3
-      : linkHover == 'Furniture Craftsperson'
+      : linkHover == 'Furniture Crafts'
       ? 4
-      : linkHover == 'Lifelong Learner'
+      : linkHover == 'Lifelong Learning'
       ? 5
-      : linkHover == 'Software Projects (coming soon)'
-      ? 6
       : 0;
+  console.log(index);
   activePanel(index);
 }
 

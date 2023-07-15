@@ -117,20 +117,23 @@ nav {
   font-weight: bold;
 }
 
-.nav-link {
-  flex-basis: 60px;
+.nav-btn {
+  flex-basis: 110px;
   text-align: center;
   margin: 0 5px;
-  background-color: var(--green2b);
   border-radius: 15px;
-  padding: 5px 4px;
+  padding: 5px 6px;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 70px;
-  color: var(--navText);
   border: 1px var(--green3b) solid;
+}
+
+.nav-link {
+  background-color: var(--green2b);
+  color: var(--navText);
 }
 
 .nav-link:hover {
@@ -139,19 +142,8 @@ nav {
 }
 
 .external-nav-link {
-  flex-basis: 60px;
-  text-align: center;
   background-color: var(--green6);
-  border-radius: 15px;
-  padding: 5px 4px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 70px;
   color: var(--green2b);
-  border: 1px var(--green3b) solid;
-  margin: 0 0 0 8px;
   text-decoration: none;
 }
 
