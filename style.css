@@ -10,13 +10,17 @@ Responsive Image gallery Style rules
 :root {
   --navbar: rgba(230, 230, 230, 0.8);
   --navText: rgba(43, 43, 44, 0.7);
+  --navText2:rgba(17, 19, 17, 0.7);
   --preOverlayLight: rgba(255, 255, 255, 0);
   --preOverlayDarkText: rgba(43, 43, 44, 0);
-  --overlayLight: rgba(255, 255, 255, 0.8);
+  --overlayLight: rgba(255, 255, 255, 0.9);
   --overlayDarkText: rgba(43, 43, 44, 1);
   --labelLightText: rgb(255, 255, 255);
-  --labelDark: rgba(43, 43, 44, 0.75);
+  --labelDark: rgba(43, 43, 44, 0.85);
   --hamburgerMenu: rgba(230, 230, 230, 0.9);
+  --tech: rgba(255, 255, 255, 0.4);
+
+  --light-pink: #f0b7b1;
 
   /* colour palette from https://coolors.co/palette/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472 */
   --pink: #ffa69e;
@@ -26,13 +30,16 @@ Responsive Image gallery Style rules
   --grey: #5e6472;
 
   /* colour palette from https://coolors.co/palette/faf3dd-c8d5b9-8fc0a9-68b0ab-696d7d */
+  --green1a: #fdfbf5;
   --green1: #faf3dd;
   --green2: #c8d5b9;
+  --green2b: #e7f1dd;
+  --green2c: #fbfde3;
   --green3: #8fc0a9;
   --green3b: #aecebf;
   --green4: #68b0ab;
   --green5: #696d7d;
-  --green6: #2d2e35;
+  --green6: rgba(74, 90, 68, 0.7);
 
   --brown: #ac9a7a;
   --fawn: #c2b6a3;
@@ -113,18 +120,44 @@ nav {
 .nav-link {
   flex-basis: 60px;
   text-align: center;
-  margin: 0 8px;
-  background-color: var(--green1);
+  margin: 0 5px;
+  background-color: var(--green2b);
   border-radius: 15px;
-  padding: 5px 10px;
+  padding: 5px 4px;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 70px;
+  color: var(--navText);
+  border: 1px var(--green3b) solid;
 }
 
-.end-nav-link {
+.nav-link:hover {
+  background-color: var(--green1a);
+  color: var(--navText2);
+}
+
+.external-nav-link {
+  flex-basis: 60px;
+  text-align: center;
+  background-color: var(--green6);
+  border-radius: 15px;
+  padding: 5px 4px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  color: var(--green2b);
+  border: 1px var(--green3b) solid;
   margin: 0 0 0 8px;
+  text-decoration: none;
+}
+
+.external-nav-link:hover {
+  background-color: rgba(33, 36, 33, 0.7);
+  color: var(--green1);
 }
 
 .longlink1 {
