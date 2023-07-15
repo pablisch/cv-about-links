@@ -17,6 +17,7 @@ Responsive Image gallery Style rules
   --overlayDarkText: rgba(43, 43, 44, 1);
   --labelLightText: rgb(255, 255, 255);
   --labelDark: rgba(43, 43, 44, 0.85);
+  --panelBorderMid: rgba(124, 124, 125, 0.45);
   --hamburgerMenu: rgba(230, 230, 230, 0.9);
   --tech: rgba(255, 255, 255, 0.4);
 
@@ -280,7 +281,7 @@ nav img:hover ~ h1 {
   left: 0;
   transition: all 0.4s ease-in-out;
   color: var(--preOverlayDarkText);
-  border: 0px var(--labelDark) solid;
+  border: 1px var(--panelBorderMid) solid;
   border-radius: 25px;
   display: flex;
   align-items: center;
