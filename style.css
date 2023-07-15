@@ -111,14 +111,8 @@ nav {
   max-width: 600px;
 }
 
-.navlist p {
-  color: var(--navText);
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
 .nav-btn {
+  cursor: pointer;
   flex-basis: 110px;
   text-align: center;
   margin: 0 5px;
@@ -512,8 +506,9 @@ footer p {
   .hamburger.active .burgerBar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  .nav-link {
+  .nav-btn {
     flex-basis: 40px;
+    margin: 2px 0;
   }
   .navlist {
     position: fixed;
@@ -528,9 +523,6 @@ footer p {
     z-index: 1;
     padding-top: 10px;
     opacity: 0;
-  }
-  nav p {
-    margin: 16px 0;
   }
   .navlist.active {
     left: 0;
