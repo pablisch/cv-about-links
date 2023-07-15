@@ -28,17 +28,19 @@ Responsive Image gallery Style rules
   --cream: #faf3dd;
   --light-blue: #b8f2e6;
   --mid-blue: #aed9e0;
-  --grey: #5e6472;
+  --grey: #626764;
 
   /* colour palette from https://coolors.co/palette/faf3dd-c8d5b9-8fc0a9-68b0ab-696d7d */
   --green1a: #fdfbf5;
   --green1: #faf3dd;
   --green2: #c8d5b9;
+  --green2Ref: rgb(200, 213, 185);
   --green2b: #e7f1dd;
   --green2c: #fbfde3;
   --green3: #8fc0a9;
   --green3b: #aecebf;
   --green4: #68b0ab;
+  --green4Ref: rgb(104, 176, 171);
   --green5: #696d7d;
   --green6: rgba(74, 90, 68, 0.7);
 
@@ -80,11 +82,11 @@ body {
 /* NAVBAR */
 
 nav {
-  background-color: var(--green2);
-  /* background-image: url('images/ropeBackground3.jpeg'); */
+  background-color: #c8d5b9;
   background-size: cover;
   padding: 7px 0;
   z-index: 0;
+  transition: background-color 3s ease;
 }
 
 .nav-container {
@@ -195,11 +197,11 @@ nav li {
   transition: opacity 4s ease;
 }
 
-nav img:hover {
+.logo-image:hover {
   opacity: 0.1;
 }
 
-nav img:hover ~ h1 {
+.logo-image:hover ~ h1 {
   color: #adfe2f;
 }
 

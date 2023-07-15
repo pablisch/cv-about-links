@@ -1,7 +1,8 @@
 const panelTopics = document.querySelectorAll('.overlay'); // all topic panels
 const panelTitles = document.querySelectorAll('.panel-label'); // all panel labels
 const navLinks = document.querySelectorAll('.nav-link'); // all nav links
-const midSection = document.querySelector('.galleryContainer'); // for all active quirk
+const midSection = document.querySelector('#gallery-section'); // for all active quirk
+const navbar = document.querySelector('#navbar'); // for nav colour transition
 
 let focusUrl;
 let focusHeading;
@@ -243,6 +244,8 @@ function allActive() {
   });
   midSection.style.backgroundColor = '#68b0ab';
   midSection.style.transition = 'background-color 4s ease';
+  navbar.style.backgroundColor = '#626764';
+  navbar.style.transition = 'background-color 4s ease';
 }
 
 // REMOVE ALL infoActive classes + apply normal transitions
@@ -257,4 +260,6 @@ function clearAllActive() {
   });
   midSection.style.backgroundColor = '#faf3dd';
   midSection.style.transition = 'background-color 3s ease';
+  navbar.style.backgroundColor = '#c8d5b9';
+  navbar.style.transition = 'background-color 3s ease';
 }
