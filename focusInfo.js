@@ -52,7 +52,7 @@ function setFocusInfo(focusKey) {
       'The urge to create has never left me and spills out into carving, book-binding, small sculptural pieces and into the digital world.';
     
   } else if (focusKey === 5) { // LEARNING AND CURIOSITY
-    focusPageMessage = 'Hover over any image panel to expand it';
+    focusPageMessage = 'Hover over any image panel to expand it. All photos are my own except for the one with me in it.';
     focusUrl = 'https://pablisch.github.io/travel-images-picture-pad/';
     focusHeading = 'Lifelong Learning & Curiosity';
     focusPara1 =
