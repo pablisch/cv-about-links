@@ -115,12 +115,12 @@ nav {
 
 .nav-btn {
   cursor: pointer;
-  flex-basis: 110px;
+  flex-basis: 180px;
   text-align: center;
-  margin: 0 5px;
+  margin: 0 3px;
   border-radius: 15px;
-  padding: 5px 6px;
-  font-weight: bold;
+  padding: 5px 8px;
+  /* font-weight: bold; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,6 +147,18 @@ nav {
 .external-nav-link:hover {
   background-color: rgba(33, 36, 33, 0.7);
   color: var(--green1);
+}
+
+.github-link-btn {
+  background-color: var(--green1);
+}
+
+.github-link-btn:hover {
+  background-color: #fff;
+}
+
+.github-link {
+  max-width: 60px;
 }
 
 .longlink1 {
