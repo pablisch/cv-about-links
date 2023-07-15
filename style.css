@@ -150,11 +150,11 @@ nav {
 }
 
 .github-link-btn {
-  background-color: var(--green1);
+  background-color: var(--green1a);
 }
 
 .github-link-btn:hover {
-  background-color: #fff;
+  background-color: #d7ffb0;
 }
 
 .github-link {
@@ -542,6 +542,9 @@ footer p {
     left: 0;
     top: 65px;
     opacity: 1;
+  }
+  .github-link {
+    max-width: 25px;
   }
 }
 
