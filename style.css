@@ -581,3 +581,29 @@ footer p {
     width: 95vw;
   }
 }
+
+@media (max-width: 410px) {
+  nav h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 350px) {
+  nav h1 {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    text-align: center;
+  }
+  .logo-image {
+    margin: 0;
+  }
+}
+
+@media (max-width: 270px) {
+  nav h1 {
+    font-size: 1.2rem;
+  }
+  .logo-image {
+    max-width: 40px;
+  }
+}
